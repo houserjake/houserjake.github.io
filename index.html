@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homepage</title>
+
+<style>
+body {
+    font-family: 'Special Elite', monospace;
+    font-size: 13px;
+    margin: 40px;
+    background: white;
+    color: black;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* Left column */
+
+.sidebar h1 {
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: 0.08em;
+    margin: 0 0 20px 0;
+}
+
+.index {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.index div {
+    cursor: pointer;
+}
+
+.index div:hover {
+    text-decoration: underline;
+}
+
+/* Right column */
+
+#content {
+    max-width: 650px;
+}
+
+#content h2 {
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+#content p {
+    line-height: 1.5;
+    margin: 0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Left Column -->
+    <div class="sidebar">
+
+        <h1>INDEX</h1>
+
+        <div class="index">
+            <div onclick="show(1)">INFORMATION</div>
+            <div onclick="show(2)">SHORT STORIES</div>
+            <div onclick="show(3)">CURRENT PROJECT</div>
+            <div onclick="show(4)">VIDEO + IMAGE</div>
+        </div>
+
+    </div>
+
+    <!-- Right Column -->
+    <div id="content">
+        <h2></h2>
+
+        <p>
+
+        </p>
+    </div>
+
+</div>
+
+<script>
+const pages = {
+
+1: `
+<h2>INFORMATION</h2>
+
+<p>
+Jake Houser (he/him) is a writer and a student at the University of Chicago. At the moment he is working on a novel and on earning an MA.
+<br><br>
+CONTACT
+<br><br>
+jakehouserbiz@gmail.com
+<br><br>
+WORK  
+<br><br>
+2026 FREELANCE. Home improvement, image labeling, zine review, writing, sound design. 
+<br><br>
+2024-2025 PHOTOGRAPHY ASSISTANT AT RH STUDIO. Assisted photography productions from set design and lighting to digital photograph storage and retrieval.
+<br><br>
+2022-2023 ENGLISH UNDERGRADUATE PEER MENTOR AT UCSB. Helped guide peers to enhance academic achievement.
+<br><br>
+EDUCATION
+<br><br>
+University of California, Santa Barbara, 2024
+<br>
+Bachelor of Arts in English, Literature. Minor in Philosophy
+
+</p>
+`,
+
+2: `
+<h2>SHORT STORIES</h2>
+
+<p>
+-- A LITTLE BOY BORN GREY --
+<br><br>
+It was a little boy born grey, lifeless. The midwife had splashed his belly with water, pulled open his little shut eyelids, and smacked his back. But no cough came. No breath. That's when Sofia, waking up from the pain of birth, started to cry out for her child.
+"My baby -- I want my baby! Give him to me, please!"
+There was a still air that the midwife would not split with words, or so much as the shuffling of feet. It was already a phantom, and she knew it. I knew it.
+"But… please!" Sofia wailed again. 
+However, its life, his life, existed only in a wretched hallucination and a swollen belly soon to shrink. I was standing by the corner of the bed done up with tan linens, less likely to stain than white, with glassy eyes and cognac fumes permeating my breath. Friday was the day it was supposed to come. Friday, not today. I had been at the trattoria, not eating. The midwife had to send a boy. Oh, the faces at the bar! You should have seen them looking at me. Their expressions bore contempt, a judgment, as though I had left my wife at home to have my child alone, nobody at her side, all for a little spot of cognac. 
+In the nursery I said nothing. And I watched and then, then I paced up and down by the bedside, looking at Sofia's face fresh from agony. And almost at the same time, like we couldn't face one another, we turned our heads -- Sofia's into the pillow, and mine to the wall where a picture of my grandmother’s family hung.
+Sofia had told me that the picture was frightening. That we should have to move it into a photo album or some different room, somewhere out of the nursery, not that there were many rooms to which I could move it, once the baby came. Children are frightened by old things; she had told me so. And the family was very old. 
+Maybe I could put it in the office. Though, that's where Sofia spent most of her time painting and she would probably disapprove. Now it would most likely stay in the nursery where there would be no life but the passing movements of a Mrs. Rossi, who cleaned the house on Thursdays, and who would clear the dust from the surfaces of the room only once and a while, perhaps not every Thursday if the week was slow, but every other Thursday. And Mrs. Rossi would know that time was still moving -- passing us -- because she'd notice it the most. She'd notice more than Sofia and me that our chances of having another child were dwindling with each pass of that damp cloth over the crib barriers and the windowsills.
+Mrs. Rossi hadn't come yet. It was Wednesday, and the baby would have to be buried before it started to smell. That's what I thought of while Sofia clutched the grey body of our creation. And she wept quietly, and I didn't have it in me to interrupt her sobs with some rigid movement like stroking my hand through her hair. That would be only torture for us both. No pleasantry would allow for genuine consolation.
+Would she want to bury it in a cemetery? In the backyard? Like a family's dead dog? What would it say on the headstone? He never had a name. Sofia had mentioned something, David, I think it was, but no. No, there was no name, only this object, clutched, to be discarded in some way. Put out of the house and, somehow, out of mind. How many have written of a still birth? Plenty. But this was my only chance at a child! 
+Maybe we shouldn't have tried. I had heard them tell me, heard something tell me, that we weren't supposed to bear. It was my fault, not Sofia's. I never told her what I'd heard. I'd never told anyone. When Sofia fell asleep the midwife peeled the lifeless child out from her grip and wrapped it in a blanket. She put him somewhere, I'm not sure where. 
+And I went to the kitchen, past our baby blue dining table and pulled cold bits of chicken meat off the leg bones that were left in the fridge. The meat chilled my fingers, and I ate standing up, then poured a glass of amaro and sparkling water. And there were no oranges in the kitchen, but plenty were growing. It was winter, after all, but I didn't want to go outside.
+The midwife turned the lights out in the nursery, having given something to Sofia for her to sleep, and came into the kitchen. She struggled to tell me that she would be leaving, but would be back in the morning, to which I nodded my head and shut my eyes, as if to tell her that no, indeed, she hadn't been here at all. She did not need to remember this. 
+I woke up not wanting but wishing. Not feeling anything but the need to go somewhere. I wished to be sitting in the park with Sofia. To be watching old couples feeding pigeons, or young ones kissing on the grass. More than anything I wished for life to be abundant, replenishing, consistent, and forgiving. Not bitter. Not something that takes and takes. But I could not go anywhere, not anymore. I took and I had taken. I had taken from my family's generosity the money that brought me to Italy. And I took Sofia from the love of her family to live with me, in the only place where I could afford a house, a garden, even a citrus orchard. It would be perfect; I had told her. And I seldom break a promise. 
+The smell of sulfur wafted into the nursery from the match that I had struck inside to light my morning cigarette. I took my drags outside and when I walked back in through the patio doors, the midwife was standing there, rather motionless, rather timid, rather cold, still wrapped up in a scarf. She was carrying a bag. We paused, each of us still, for a moment, and I saw in her eyes that she had not slept much, and she noticed in mine that I hadn't either.  
+<br><br><br>
+
+-- A STONE'S THROW --
+<br><br>
+The porch light was on, and Michael went outside the already open door to turn it off with the pull string -- mostly metal. A damp bit of cloth hung at the bottom of the cord, and, after pulling, he wiped the wet from his fingertips off with the bottom inch of his shirt, then reached for his front left pocket where there rested a fresh pack picked up from the gas station after work. On the porch he had a cigarette in the dark. Less bugs that way. He closed the screen behind him while exhaling, in one practiced motion. It was too dark to see, and the cicadas chirped their tireless song. The tune traveled ruthlessly through the leaves and branches of the deciduous poplar trees without stirring up a rustle. Yes, there was no wind. Michael missed the wind. Or maybe it had blown him far enough away to where there was none. 
+He went back inside and left the door open, with the screen secured so no more bugs would get in, and he waited. Oh, the mosquito. Michael had thwacked a plump mosquito against his wrist before he went outside. It was about to pierce his skin. On his hand a dripple of blood needed wiping off. So, sauntering past the kitchen, he found himself a rag in the laundry hamper and cleaned. Threw the rag back into the hamper. Michael’s dryer was broken, and he hadn’t the time to fix it himself. He hated hiring people to work on the house. Perhaps if he drank no beer in the evenings, he would have the time. Nothing ever got fully dry on the porch.
+The dark waited too, for the next morning. Michael wanted to rest, but his eyes had yet to go limp. The sign that sleep has come. Peeling off his socks, he walked back to the laundry room to throw them into the hamper, then grabbed another beer from the refrigerator. That still worked. His thrilling little ice box. A broken mirror hung next to the kitchen, near the entryway to the small house. He’d heard it was bad luck, or something. But Michael’s Grandma was the superstitious one, not him. She was resting now, a state line or two away. A stone’s throw! That’s what she would have called it. 
+
+No work tomorrow. It was the weekend and Michael hadn’t any plans. And though he seldom pondered what he would do on the weekends, as his routine was quite the same come most Saturdays, that evening, with his eyes going finally limp, he wondered who would be at the bar. There was the usual crowd, as most bars in small towns tend to have. Others like himself, only older. The ones who like to play pool and the ones who long for conversation but are shut down by the bartender when or if they are off putting to new clients. Michael was a regular at the Alley but wasn’t the type for conversation. He said hello, and sometimes made small talk when he played pool. Usually when Bill was around. He found it tiring, conversation. He stumbled in his speech, and he didn’t like to share anything about his personal life, though one could assume much of what that looked like. However, assumptions can’t be taken for reality, yet because of his silent ways, Michael had few people to call friends. The men Michael worked with, and the one woman, would not constitute as friends. Work companions, maybe. Acquaintances. Yes, acquaintances is what they were. But Michael would never use the word. He didn't know what it meant. He knew they got along better with each other than they did with him. They had their own banter. Michael wasn’t all that good at understanding their jokes. He wasn't all that good at understanding most humor, for that matter. 
+
+</p>
+`,
+
+3: `
+<h2>CURRENT PROJECT</h2>
+
+<p>
+-- TWO GATES TO THE HORIZON --
+<br><br>
+Is the title to a novella length manuscript I've been working on. It is currently being marked up by colleagues prior to querying. If you'd like more information on this work, please get in touch. 
+
+</p>
+`,
+
+4: `
+<h2>VIDEO + IMAGE</h2>
+
+<p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9sSTfSf5gqg?si=Z3JpRCsF4PxCWZRE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</p>
+`
+
+};
+
+function show(id) {
+    document.getElementById("content").innerHTML = pages[id];
+}
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  #clock {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-family:  'Special Elite', monospace;
+    font-size: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: yellow;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+
+  <div id="clock"></div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      document.getElementById('clock').innerText = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock(); // run right away
+  </script>
+
+</body>
+</html>
